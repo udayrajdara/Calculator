@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -12,6 +15,8 @@
             <h3 class="title">
                 Calculator
             </h3>
+            <i class='bx bx-moon' onclick="changeColor()"></i>
+
             <form>
                 <div class="display">
                 <input type="text" name="display">
@@ -50,10 +55,24 @@
             </form>
         </div>
         </div>
-
-
-
-
     </div>
+
+    <script>
+        let body = document.querySelector('.container')
+        let calculator = document.querySelector('.calculator')
+        let bx = document.querySelector('.bx')
+        let colors=['white','black']
+
+
+        body.style.backgroundColor = 'black';
+       
+
+        bx.addEventListener('click', function(){
+            const colorIndex=parseInt(Math.random()*colors.length);
+            body.style.backgroundColor = colors[colorIndex];
+        })
+
+
+    </script>
 </body>
 </html>

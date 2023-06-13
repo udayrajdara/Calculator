@@ -11,11 +11,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
+.container i{
+    float: right;
+    color: black;
+    margin-top: -20px;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    .bx{
+        background-color: aquamarine;
+    }
+}
+
 .calculator{
     background-color: white;
     padding: 20px;
     border-radius: 10px;
+    outline: 2px solid black;
 }
 .calculator form input{
     border: 0;
